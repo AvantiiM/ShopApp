@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Return List</title>
+</head>
+<body>
+  <h1>Return List</h1>
+  <ul>
+    <% retrns.forEach(retrnItem => { %>
+      <li>
+        <strong><%= retrnItem.name %></strong>
+        <p>Order ID: <%= retrnItem.orderID %></p>
+        <p>Reason: <%= retrnItem.reason %></p>
+        <p>Return Date: <%= retrnItem.returnDate.toDateString() %></p>
+        <p>Refund Status: <%= retrnItem.refundStatus %></p>
+        <a href="/retrns/<%= retrnItem._id %>/edit">Edit</a>
+        <form action="/retrns/<%= retrnItem._id %>?_method=DELETE" method="POST">
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+    <% }); %>
+  </ul>
+  <a href="/retrns/create">Add Return</a>
+</body>
+</html>

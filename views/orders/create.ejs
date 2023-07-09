@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Order</title>
+</head>
+<body>
+  <h1>Create Order</h1>
+  <form action="/orders" method="POST">
+    <!-- <label for="userID">User ID:</label>
+    <input type="text" id="userID" name="userID" required><br> -->
+    <label for="orderDate">Order Date:</label>
+    <input type="date" id="orderDate" name="orderDate" required><br>
+    <label for="totalPrice">Total Price:</label>
+    <input type="number" id="totalPrice" name="totalPrice" required><br>
+    <label for="orderStatus">Order Status:</label>
+    <input type="text" id="orderStatus" name="orderStatus" required><br>
+    <label for="shippingAddress">Shipping Address:</label>
+    <textarea id="shippingAddress" name="shippingAddress" required></textarea><br>
+    <label for="deliveryStatus">Delivery Status:</label>
+    <input type="text" id="deliveryStatus" name="deliveryStatus" required><br>
+    <label for="paymentAddress">Payment Address:</label>
+    <textarea id="paymentAddress" name="paymentAddress" required></textarea><br>
+    <button type="submit">Create</button>
+  </form>
+</body>
+</html>

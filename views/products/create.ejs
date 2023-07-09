@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Product</title>
+</head>
+<body>
+  <h1>Create Product</h1>
+  <form action="/products" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+    <!-- <label for="categoryID">Category ID:</label>
+    <input type="text" id="categoryID" name="categoryID" required><br> -->
+    <label for="price">Price:</label>
+    <input type="number" id="price" name="price" required><br>
+    <!-- <label for="sellerID">Seller ID:</label>
+    <input type="text" id="sellerID" name="sellerID" required><br> -->
+    <label for="quantityAvailable">Quantity Available:</label>
+    <input type="number" id="quantityAvailable" name="quantityAvailable" required><br>
+    <label for="quantitySold">Quantity Sold:</label>
+    <input type="number" id="quantitySold" name="quantitySold" required><br>
+    <label for="reviewAverage">Review Average:</label>
+    <input type="number" id="reviewAverage" name="reviewAverage" required><br>
+    <label for="numOfReviews">Number of Reviews:</label>
+    <input type="number" id="numOfReviews" name="numOfReviews" required><br>
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" required></textarea><br>
+    <button type="submit">Create</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Review List</title>
+</head>
+<body>
+  <h1>Review List</h1>
+  <ul>
+    <% reviews.forEach(review => { %>
+      <li>
+        <strong><%= review.name %></strong>
+        <p>Price: $<%= review.price %></p>
+        <p>Description: <%= review.description %></p>
+        <a href="/reviews/<%= review._id %>/edit">Edit</a>
+        <form action="/reviews/<%= review._id %>?_method=DELETE" method="POST">
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+    <% }); %>
+  </ul>
+  <a href="/reviews/create">Add Review</a>
+</body>
+</html>

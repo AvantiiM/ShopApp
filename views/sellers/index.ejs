@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Seller List</title>
+</head>
+<body>
+  <h1>Seller List</h1>
+  <ul>
+    <% sellers.forEach(seller => { %>
+      <li>
+        <strong><%= seller.name %></strong>
+        <p>Quantity Sold: <%= seller.quantitySold %></p>
+        <p>Review Average: <%= seller.reviewAverage %></p>
+        <p>Email: <%= seller.email %></p>
+        <p>Join Date: <%= seller.joinDate.toDateString() %></p>
+        <p>Number of Products: <%= seller.numProducts %></p>
+        <a href="/sellers/<%= seller._id %>/edit">Edit</a>
+        <form action="/sellers/<%= seller._id %>?_method=DELETE" method="POST">
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+    <% }); %>
+  </ul>
+  <a href="/sellers/create">Add Seller</a>
+</body>
+</html>

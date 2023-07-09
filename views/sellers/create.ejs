@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Seller</title>
+</head>
+<body>
+  <h1>Create Seller</h1>
+  <form action="/sellers" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+    <label for="quantitySold">Quantity Sold:</label>
+    <input type="number" id="quantitySold" name="quantitySold" required><br>
+    <label for="reviewAverage">Review Average:</label>
+    <input type="number" id="reviewAverage" name="reviewAverage" required><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+    <label for="joinDate">Join Date:</label>
+    <input type="date" id="joinDate" name="joinDate" required><br>
+    <label for="numProducts">Number of Products:</label>
+    <input type="number" id="numProducts" name="numProducts" required><br>
+    <button type="submit">Create</button>
+  </form>
+</body>
+</html>
